@@ -1,15 +1,15 @@
 <x-jet-action-section>
     <x-slot name="title">
-        {{ __('Browser Sessions') }}
+        {{ __('Sessões do navegador') }}
     </x-slot>
 
     <x-slot name="description">
-        {{ __('Manage and logout your active sessions on other browsers and devices.') }}
+        {{ __('Gerencie e saia de suas sessões ativas em outros navegadores e dispositivos.') }}
     </x-slot>
 
     <x-slot name="content">
         <div class="max-w-xl text-sm text-gray-600">
-            {{ __('If necessary, you may logout of all of your other browser sessions across all of your devices. Some of your recent sessions are listed below; however, this list may not be exhaustive. If you feel your account has been compromised, you should also update your password.') }}
+            {{ __('Se necessário, você pode fazer logout de todas as outras sessões do navegador em todos os seus dispositivos. Se achar que sua conta foi comprometida, você também deve atualizar sua senha.') }}
         </div>
 
         @if (count($this->sessions) > 0)

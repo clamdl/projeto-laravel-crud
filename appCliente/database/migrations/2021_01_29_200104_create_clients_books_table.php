@@ -14,8 +14,8 @@ class CreateClientsBooksTable extends Migration
     public function up()
     {
         Schema::create('clientes_livros', function (Blueprint $table) {
-            $table->unsignedBigInteger('clientes_id');
-            $table->unsignedBigInteger('livros_id');
+            $table->unsignedInteger('clientes_id');
+            $table->unsignedInteger('livros_id');
         });
         Schema::table('clientes_livros', function (Blueprint $table) {
             $table->foreign('clientes_id')->references('id')->on('clientes');

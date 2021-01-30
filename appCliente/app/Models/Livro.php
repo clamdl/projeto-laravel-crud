@@ -5,7 +5,7 @@ namespace App\Models;
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Model;
 
-class Book extends Model
+class Livro extends Model
 {
     use HasFactory;
 
@@ -13,7 +13,10 @@ class Book extends Model
 
     public function clientes()
     {
-        return $this->belongsToMany('App\Models\Client', 'clientes_livros', 'livros_id','clientes_id');
+        return $this->belongsToMany('App\Models\Cliente', 'clientes_livros', 'livros_id','clientes_id');
     }
-
+    public function addCliente(Cliente $cliente)
+    {
+        return $this->clientes()->save($cliente);
+    }
 }

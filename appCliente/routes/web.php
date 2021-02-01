@@ -22,6 +22,7 @@ Route::get('/', function () {
 Route::middleware(['auth:sanctum', 'verified'])->group(function () {
     Route::get('/clientes', [ClienteController::class, 'index'])->name('clientes');
     Route::get('livros', [LivroController::class, 'index'])->name('livros');
+    
 });
 
 

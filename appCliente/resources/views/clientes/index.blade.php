@@ -32,7 +32,7 @@
                                 <td>{{ $cliente->telefone }}</td>
 
                                 <td>
-                                    <a class="btn btn-default" href="#">Editar</a>
+                                    <a class="btn btn-default" href="{{route('clientes.editar', $cliente->id)}}">Editar</a>
                                     <a class="btn btn-danger" href="#">Deletar</a>
                                 </td>
                             </tr>

@@ -25,6 +25,9 @@ Route::middleware(['auth:sanctum', 'verified'])->group(function () {
     Route::get('livros', [LivroController::class, 'index'])->name('livros');
     Route::get('/clientes/adicionar', [ClienteController::class, 'adicionar'])->name('clientes.adicionar');
     Route::post('/clientes/salvar', [ClienteController::class, 'salvar'])->name('clientes.salvar');
+    Route::get('/clientes/editar/{id}', [ClienteController::class, 'editar'])->name('clientes.editar');
+    Route::put('/clientes/atualizar/{id}', [ClienteController::class, 'atualizar'])->name('clientes.atualizar');
+
     
 });
 

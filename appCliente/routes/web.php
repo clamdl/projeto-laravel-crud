@@ -4,6 +4,7 @@ use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\ClienteController;
 use App\Http\Controllers\LivroController;
 
+
 /*
 |--------------------------------------------------------------------------
 | Web Routes
@@ -22,6 +23,8 @@ Route::get('/', function () {
 Route::middleware(['auth:sanctum', 'verified'])->group(function () {
     Route::get('/clientes', [ClienteController::class, 'index'])->name('clientes');
     Route::get('livros', [LivroController::class, 'index'])->name('livros');
+    Route::get('/clientes/adicionar', [ClienteController::class, 'adicionar'])->name('clientes.adicionar');
+    Route::post('/clientes/salvar', [ClienteController::class, 'salvar'])->name('clientes.salvar');
     
 });
 

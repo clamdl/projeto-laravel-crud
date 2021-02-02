@@ -5,12 +5,14 @@
     <div class="row">
         <div class="col-md-12">
             <div class="panel panel-default">
-                <div class="panel-heading">Bem-Vindo</div>
+
+            <ol class="breadcrumb panel-heading">
+                    <li class="active">Clientes</li>
+                </ol>
 
                 <div class="panel-body">
-                    <p>Sistema de gerenciamento de Clientes!</p>
                     <p>
-                    <a class="btn btn-info" href="#">Adicionar</a>
+                    <a class="btn btn-info" href="{{route('clientes.adicionar')}}">Adicionar</a>
                     </p>
 
                     <table class="table table-bordered">

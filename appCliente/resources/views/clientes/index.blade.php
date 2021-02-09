@@ -33,7 +33,15 @@
 
                                 <td>
                                     <a class="btn btn-default" href="{{route('clientes.editar', $cliente->id)}}">Editar</a>
-                                    <a class="btn btn-danger" href="#">Deletar</a>
+
+                                    <div>
+                                    <form action="{{ route('clientes.deletar', $cliente->id)}}"method="post">
+                                    {{ csrf_field()}}
+                                    @method('delete')
+                                    <button type="submit" class="btn btn-danger delete-btn">Deletar</a>
+                                    </form>
+                                    </div>
+
                                 </td>
                             </tr>
                             @endforeach

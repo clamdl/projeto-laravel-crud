@@ -59,5 +59,11 @@ class ClienteController extends Controller
             
             return redirect()->route('clientes');
             }
+    public function deletar($id)
+    {
+        \App\Models\Cliente::findOrFail($id)->delete();
+
+        return redirect('clientes')->with('msg', 'Registro excluído com sucesso!');
+    }
 }
 

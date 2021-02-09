@@ -27,6 +27,7 @@ Route::middleware(['auth:sanctum', 'verified'])->group(function () {
     Route::post('/clientes/salvar', [ClienteController::class, 'salvar'])->name('clientes.salvar');
     Route::get('/clientes/editar/{id}', [ClienteController::class, 'editar'])->name('clientes.editar');
     Route::put('/clientes/atualizar/{id}', [ClienteController::class, 'atualizar'])->name('clientes.atualizar');
+    Route::delete('/clientes/deletar/{id}', [ClienteController::class, 'deletar'])->name('clientes.deletar');
 
     
 });

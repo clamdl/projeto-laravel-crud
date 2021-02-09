@@ -18,8 +18,8 @@ class CreateClientsBooksTable extends Migration
             $table->unsignedInteger('livros_id');
         });
         Schema::table('clientes_livros', function (Blueprint $table) {
-            $table->foreign('clientes_id')->references('id')->on('clientes');
-            $table->foreign('livros_id')->references('id')->on('livros');
+            $table->foreign('clientes_id')->references('id')->on('clientes')->onDelete('cascade');
+            $table->foreign('livros_id')->references('id')->on('livros')->onDelete('cascade');
         });
     }
 
